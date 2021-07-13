@@ -1,0 +1,26 @@
+{%extends 'base.html' %}
+
+
+{% block content%}
+<div class="container sign">
+    <h1 class="headd">Login</h1>
+    <div class="signup-form card">
+        <form method="POST" class="signup">
+            {% csrf_token %}
+            <div class="form-control">
+                <h5>User Name</h5>
+                <input type="text" name="name" placeholder="Enter UserName" required>
+            </div>
+
+            <div class="form-control">
+                <h5>password</h5>
+                <input type="password" name="password" placeholder="Enter Password" required>
+            </div>
+            <input type="submit" value="login" class="btn btn-primary">
+        </form>
+        {% for message in messages %}
+        {{ message }}
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

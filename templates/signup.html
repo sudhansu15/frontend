@@ -1,0 +1,33 @@
+{%extends 'base.html' %}
+
+
+{% block content%}
+<div class="sec_background">
+    <div class="container sign">
+        <h1 class="headd">Signup</h1>
+        <div class="signup-form card">
+            <form class="signup" action="" method="post">
+                {% csrf_token %}
+                <div class="form-control">
+                    <h5>User Name</h5>
+                    <input type="text" name="username" placeholder="Enter UserName" required>
+                </div>
+                <div class="form-control">
+                    <h5>Email address</h5>
+                    <input type="email" name="email" placeholder="Enter Email" required>
+                </div>
+                <div class="form-control">
+                    <h5>password</h5>
+                    <input type="password" name="password1" placeholder="Enter Password" required>
+                </div>
+                <div class="form-control">
+                    <h5>confirm password</h5>
+                    <input type="password" name="password2" placeholder="Re-enter Password" required>
+                </div>
+                <input type="submit" value="sign up" class="btn btn-primary">
+            </form>
+
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,53 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://kit.fontawesome.com/d51da0fd7c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static 'style.css'%}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <title>stock prediction | greatest advancement of technology</title>
+</head>
+<!-- body -->
+
+<body>
+    <nav class="navbar sticky">
+        <div class="container flex">
+            <div class="logo">
+                <a href="{% url 'index' %}"><i class="fas fa-chart-line"></i> STO<span>NKS</span>
+                </a>
+            </div>
+            <ul class="menu">
+                <li><a href="{% url 'index' %}"> Home </a></li>
+                <li><a href="#about"> About </a></li>
+                <li><a href="#"> Contact us </a></li>
+                {%if user.is_authenticated %}
+                <li><a href="#">Hi, {{ user.first_name }}</a></li>
+                <li><a href="{% url 'logout' %}">Logout</a></li>
+                {%else%}
+                <li><a href="{%url 'signup'%}"> Signup </a></li>
+                <li><a href="{% url 'login' %}"> Login </a></li>
+                {%endif%}
+            </ul>
+            <!-- search controller -->
+            <form class="controller">
+                <input type="text" name="" placeholder="search company name">
+                <button><a class="search-btn" href="#"><i class="fas fa-search lg"></i></a></button>
+            </form>
+        </div>
+    </nav>
+
+
+
+    {% block content%}
+
+
+    {% endblock%}
+
+</body>
+
+</html>

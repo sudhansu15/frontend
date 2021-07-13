@@ -1,0 +1,207 @@
+@import url("https://fonts.googleapis.com/css2?family=Shadows+Into+Light&family=Work+Sans:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@500;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+body {
+  font-family: "Work Sans", sans-serif;
+  /*   font-family: "Zilla Slab", serif; */
+  color: #333;
+  line-height: 1.6;
+  background-color: white;
+}
+/* navbar design */
+.navbar {
+  position: fixed;
+  width: 100%;
+  /*  background-color: #282a35; */
+  color: azure;
+  z-index: 1;
+  font-family: "Shadows Into Light", cursive;
+  font-size: 21px;
+  transition: all ease 0.3s;
+  /*  font-family: "Work Sans", sans-serif; */
+}
+.navbar.sticky {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.navbar .menu li a {
+  color: azure;
+}
+/* logo design */
+.navbar .logo a {
+  font-family: "Shadows Into Light", cursive;
+  color: azure;
+  font-size: 35px;
+  font-weight: 600;
+}
+
+.navbar .logo span {
+  color: crimson;
+}
+.navbar .menu li {
+  list-style: none;
+  display: inline-block;
+  padding: 0 5px;
+  font-size: 25px;
+  transition: color 0.3 ease;
+}
+.navbar .menu li a:hover {
+  font-size: 26px;
+  border-bottom: 2px #fff solid;
+  color: crimson;
+}
+.navbar .flex {
+  justify-content: space-between;
+}
+
+.navbar .controller input {
+  width: 300px;
+  padding: 10px;
+  border-radius: 30px;
+  border: none;
+  outline: none;
+}
+
+.navbar .controller button {
+  border-radius: 50px;
+  padding: 8px;
+  background-color: crimson;
+  border: none;
+  color: white;
+}
+
+/* some common properties */
+p {
+  margin: 10px 0;
+}
+
+img {
+  width: 100%;
+}
+
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+  overflow: auto;
+  padding: 0 60px;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+  justify-content: center;
+  align-items: center;
+}
+
+.right-main {
+  grid-template-columns: 3fr 1fr;
+}
+.left-main {
+  grid-template-columns: 1fr 3fr;
+}
+.btn {
+  display: inline-block;
+  padding: 10px 30px;
+  cursor: pointer;
+  background: crimson;
+  color: aliceblue;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+}
+
+.btn:hover {
+  transform: scale(1.08);
+}
+
+.card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  margin: 10px;
+}
+
+/* showcase styling */
+.showcase {
+  display: flex;
+  background: url("stonks.jpg") no-repeat center;
+  height: 100vh;
+  align-items: flex-end;
+  color: white;
+}
+
+/* login signin styling */
+.headd {
+  margin-top: 70px;
+}
+.signup {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container.sign {
+  max-width: 600px;
+}
+
+.signup-form {
+  position: relative;
+  justify-self: flex-end;
+  z-index: 100;
+}
+
+.signup-form .form-control {
+  margin: 15px 20px;
+  width: 90%;
+}
+
+.signup-form input[type="text"],
+.signup-form input[type="email"],
+.signup-form input[type="password"] {
+  border: 0;
+  border-bottom: 1px solid black;
+  width: 100%;
+  padding: 3px;
+  font-size: 16px;
+  outline: none;
+}
+/*  table styling */
+.tablestyle {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.tablestyle td,
+.tablestyle th {
+  /*   border: 1px solid #ddd; */
+  padding: 8px;
+}
+
+.tablestyle tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.tablestyle tr:hover {
+  background-color: #ddd;
+}
+
+.tablestyle th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: rgba(1, 3, 12, 0.8);
+  color: white;
+}
