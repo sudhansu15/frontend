@@ -21,7 +21,7 @@
             </div>
             <input type="submit" value="login" class="btn btn-primary">
         </form>
-        <p><a href="{% url 'password_reset' %}">Forgotten your password?</a> </p>
+        <p> Forgot password? Try <a href="{% url 'password_reset' %}"> resetting </a> ?</p>
         {% for message in messages %}
         {{ message }}
         {% endfor %}
