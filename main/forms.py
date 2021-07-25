@@ -2,8 +2,6 @@ from django import forms
 
 
 class SignUpForm(forms.Form):
-    first_name = forms.CharField()
-    last_name = forms.CharField()
     username = forms.CharField()
     email = forms.EmailField()
     password1 = forms.CharField(max_length=32, widget=forms.PasswordInput)
@@ -11,5 +9,6 @@ class SignUpForm(forms.Form):
 
 
 class LoginForm(forms.Form):
+    #email = forms.EmailField()
     username = forms.CharField()
     password = forms.CharField(max_length=32, widget=forms.PasswordInput)
